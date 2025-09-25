@@ -9,16 +9,17 @@
     <img src="https://skillicons.dev/icons?i=nextjs,react,tailwind,mongodb,nodejs,vercel,git" />
   </a>
 </div>
+<br>
+<div align="center">
+  <a href="/public/demo2.png">
+    <img src="/public/demo2.png" alt="BitLinks Banner" width="800"/>
+  </a>
+</div>
+<br>
 
 <div align="center">
   <a href="/public/demo1.png">
-    <img src="./.github/assets/bitlink-banner.png" alt="BitLinks Banner" width="800"/>
-  </a>
-</div>
-
-<div align="center">
-  <a href="/public/demo2.png">
-    <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=22&pause=1000&color=9F7AEA&center=true&width=435&lines=The+Fastest+%26+Simplest+URL+Shortener.;Straight+to+the+point.+No+tracking.;Free%2C+Private%2C+and+Open-Source." alt="Typing SVG" />
+    <img src="/public/demo1.png" alt="BitLinks Banner" width="800"/>
   </a>
 
 </div>
