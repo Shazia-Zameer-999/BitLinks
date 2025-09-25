@@ -4,13 +4,21 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 import { FiMenu, FiX, FiGithub } from 'react-icons/fi';
 import { motion } from 'framer-motion';
+import { usePathname } from 'next/navigation';
 
 const Navbar = () => {
+    const pathname = usePathname();
     const [isMenuOpen, setIsMenuOpen] = useState(false)
     const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen)
 
     }
+    const navLinks = [
+        { name: 'Home', href: '/' },
+        { name: 'About Us', href: '/about' },
+        { name: 'Shorten', href: '/shorten' },
+        { name: 'Contact Us', href: '/contact' },
+    ];
 
     return (
         <nav className='fixed top-0 left-0 right-0 z-50 bg-gray-900/50 backdrop-blur-lg border-b border-gray-700/50'>
@@ -24,15 +32,33 @@ const Navbar = () => {
                 </div>
 
                 {/* Desktop Menu Links */}
-                <div className='hidden md:flex items-center gap-8 text-lg text-gray-300'>
+                {/* <div className='hidden md:flex items-center gap-8 text-lg text-gray-300'>
                     <Link href="/" className="hover:text-purple-400 transition-colors">Home</Link>
                     <Link href="/about" className="hover:text-purple-400 transition-colors">About Us</Link>
                     <Link href="/shorten" className="hover:text-purple-400 transition-colors">Shorten</Link>
                     <Link href="/contact" className="hover:text-purple-400 transition-colors">Contact Us</Link>
+                </div> */}
+                <div className='hidden lg:flex items-center gap-8 text-lg text-gray-300'>
+                    {navLinks.map((link) => {
+                        const isActive = pathname === link.href;
+                        return (
+                            <Link
+                                key={link.name}
+                                href={link.href}
+                                className={
+                                    isActive
+                                        ? 'text-purple-400 font-bold [text-shadow:0_0_10px_#9F7AEA]' // Active "glow" style
+                                        : 'hover:text-purple-400 transition-colors' // Default style
+                                }
+                            >
+                                {link.name}
+                            </Link>
+                        );
+                    })}
                 </div>
 
                 {/* Desktop Action Buttons */}
-                <div className='hidden md:flex items-center gap-4'>
+                <div className='hidden lg:flex items-center gap-4'>
                     <Link href="https://github.com/Shazia-Zameer-999/BitLinks" target="_blank">
                         <button className='cursor-pointer flex items-center gap-2 bg-gray-700 rounded-lg px-4 py-2 font-semibold text-white hover:bg-gray-600 transition-all'>
                             <FiGithub /> Github
@@ -46,7 +72,7 @@ const Navbar = () => {
                 </div>
 
                 {/* Mobile Menu Button (Hamburger) */}
-                <div className='md:hidden'>
+                <div className='lg:hidden'>
                     <button onClick={toggleMenu} className="text-white text-2xl">
                         {isMenuOpen ? <FiX /> : <FiMenu />}
                     </button>
@@ -58,13 +84,30 @@ const Navbar = () => {
                 <motion.div
                     initial={{ opacity: 0, y: -10 }}
                     animate={{ opacity: 1, y: 0 }}
-                    className='md:hidden absolute top-full left-0 w-full bg-gray-900/95 border-t border-gray-700/50'
+                    className='lg:hidden absolute top-full left-0 w-full bg-gray-900/95 border-t border-gray-700/50'
                 >
                     <div className='flex flex-col items-center gap-6 py-8 text-lg text-gray-300'>
-                        <Link href="/" onClick={toggleMenu} className="hover:text-purple-400">Home</Link>
+                        {/* <Link href="/" onClick={toggleMenu} className="hover:text-purple-400">Home</Link>
                         <Link href="/about" onClick={toggleMenu} className="hover:text-purple-400">About</Link>
                         <Link href="/shorten" onClick={toggleMenu} className="hover:text-purple-400">Shorten</Link>
-                        <Link href="/contact" onClick={toggleMenu} className="hover:text-purple-400">Contact Us</Link>
+                        <Link href="/contact" onClick={toggleMenu} className="hover:text-purple-400">Contact Us</Link> */}
+                        {navLinks.map((link) => {
+                            const isActive = pathname === link.href;
+                            return (
+                                <Link
+                                    key={link.name}
+                                    href={link.href}
+                                    onClick={toggleMenu}
+                                    className={
+                                        isActive
+                                            ? 'text-purple-400 font-bold [text-shadow:0_0_10px_#9F7AEA]' // Active "glow" style
+                                            : 'hover:text-purple-400' // Default style
+                                    }
+                                >
+                                    {link.name}
+                                </Link>
+                            );
+                        })}
                         <div className='flex items-center gap-4 mt-4'>
                             <Link href="https://github.com/Shazia-Zameer-999/BitLinks" target="_blank">
                                 <button className='cursor-pointer flex items-center gap-2 bg-gray-700 rounded-lg px-4 py-2 font-semibold text-white hover:bg-gray-600 transition-all'>

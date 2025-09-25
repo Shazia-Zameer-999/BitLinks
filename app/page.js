@@ -22,14 +22,14 @@ const imageVariants = {
 
 export default function Home() {
   return (
-    <main className="bg-gray-900 bg-gradient-to-br from-[#1a0b2e] via-gray-900 to-gray-900 text-white">
+    <main className="bg-gray-900 bg-gradient-to-br from-[#1a0b2e] via-gray-900 to-gray-900 text-white px-4 md-px-0">
       <section className="grid grid-cols-1 md:grid-cols-2 min-h-[80vh] container mx-auto px-6">
         <motion.div
           className="flex flex-col gap-6 items-start justify-center text-left py-12 md:py-0"
           variants={containerVariants}
           initial="hidden"
           animate="visible">
-          <motion.h1 className="text-5xl lg:text-6xl font-extrabold leading-tight"
+          <motion.h1 className="text-5xl lg:text-6xl font-extrabold leading-tight pt-20 md:pt-0 "
             variants={itemVariants}>
             The Fastest &amp; Simplest <br />
             <span className="text-purple-400">URL Shortener</span>
