@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { FiGithub, FiLinkedin, FiTwitter, FiArrowRight } from 'react-icons/fi';
-import Link from 'next/link';
+
 
 const Footer = () => {
     return (
