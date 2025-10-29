@@ -3,6 +3,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { FiShield, FiDatabase, FiShare2, FiArchive, FiGitPullRequest, FiHelpCircle } from 'react-icons/fi';
+import Link from 'next/link';
 
 
 const PolicySection = ({ icon, title, summary, children }) => (
@@ -79,7 +80,7 @@ const PrivacyPolicy = () => {
                         <p>We store the created links in our database to keep the service functional. We reserve the right to remove any link at any time if it is found to be in violation of our Acceptable Use policy as outlined in our Terms of Service.</p>
                     </PolicySection>
 
-                     <PolicySection
+                    <PolicySection
                         icon={<FiShield size={24} />}
                         title="Data Security"
                         summary="The Gist: We take standard, reasonable measures to protect our database and keep the service secure."
@@ -94,13 +95,13 @@ const PrivacyPolicy = () => {
                     >
                         <p>We may update this Privacy Policy from time to time. The most current version will always be available on this page. By continuing to use our service after changes become effective, you agree to be bound by the revised policy.</p>
                     </PolicySection>
-                    
+
                     <PolicySection
                         icon={<FiHelpCircle size={24} />}
                         title="Questions?"
                         summary="The Gist: Have a question about our privacy practices? Please don't hesitate to reach out."
                     >
-                        <p>If you have any questions or concerns about this Privacy Policy, please feel free to get in touch with us via our <a href="/contact" className="text-purple-400 hover:underline">Contact Page</a>.</p>
+                        <p>If you have any questions or concerns about this Privacy Policy, please feel free to get in touch with us via our <Link href="/contact" className="text-purple-400 hover:underline">Contact Page</Link>.</p>
                     </PolicySection>
                 </div>
             </div>

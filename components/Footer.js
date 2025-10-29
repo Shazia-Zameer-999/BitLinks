@@ -1,6 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { FiGithub, FiLinkedin, FiTwitter, FiArrowRight } from 'react-icons/fi';
+import Link from 'next/link';
 
 const Footer = () => {
     return (
@@ -29,7 +30,7 @@ const Footer = () => {
                         <ul className="space-y-3 text-gray-400">
                             <li><Link href="/about" className="hover:text-purple-400 transition-colors">About Us</Link></li>
                             <li><Link href="/contact" className="hover:text-purple-400 transition-colors">Contact</Link></li>
-                            <li><a href="https://github.com/Shazia-Zameer-999/BitLinks" target="_blank" rel="noopener noreferrer" className="hover:text-purple-400 transition-colors">GitHub</a></li>
+                            <li><Link href="https://github.com/Shazia-Zameer-999/BitLinks" target="_blank" rel="noopener noreferrer" className="hover:text-purple-400 transition-colors">GitHub</Link></li>
                         </ul>
                     </div>
 
@@ -40,12 +41,12 @@ const Footer = () => {
                             <li><Link href="/terms" className="hover:text-purple-400 transition-colors">Terms of Service</Link></li>
                         </ul>
                     </div>
-                    
-               
+
+
                     <div className="col-span-1 md:col-span-3 lg:col-span-1">
-                         <h3 className="font-bold text-white text-lg mb-4">Stay Updated</h3>
-                         <p className="text-gray-400 text-sm mb-4">Get notified about new features and updates.</p>
-                        
+                        <h3 className="font-bold text-white text-lg mb-4">Stay Updated</h3>
+                        <p className="text-gray-400 text-sm mb-4">Get notified about new features and updates.</p>
+
                     </div>
                 </div>
             </div>
@@ -56,12 +57,12 @@ const Footer = () => {
                         © {new Date().getFullYear()} BitLinks. All Rights Reserved.
                     </p>
                     <div className="flex gap-6 mt-4 sm:mt-0">
-                        <a href="https://github.com/Shazia-Zameer-999" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transform hover:-translate-y-1 transition-all duration-300">
+                        <Link href="https://github.com/Shazia-Zameer-999" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transform hover:-translate-y-1 transition-all duration-300">
                             <FiGithub size={20} />
-                        </a>
-                        <a href="https://www.linkedin.com/in/daten-diva-903014332/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transform hover:-translate-y-1 transition-all duration-300">
+                        </Link>
+                        <Link href="https://www.linkedin.com/in/daten-diva-903014332/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transform hover:-translate-y-1 transition-all duration-300">
                             <FiLinkedin size={20} />
-                        </a>
+                        </Link>
                     </div>
                 </div>
             </div>

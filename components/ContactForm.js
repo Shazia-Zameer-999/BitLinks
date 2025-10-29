@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Toaster, toast } from 'react-hot-toast';
 import { FiUser, FiMail, FiMessageSquare, FiSend, FiGithub, FiLinkedin } from 'react-icons/fi';
+import Link from 'next/link';
 
 const ContactForm = () => {
     const [loading, setLoading] = useState(false);
@@ -40,10 +41,10 @@ const ContactForm = () => {
 
             if (response.ok) {
                 toast.success(result.message || "Thanks for reaching out! I'll get back to you soon.");
-     
+
                 setFormData({ name: '', email: '', message: '' });
             } else {
-         
+
                 toast.error(result.message || 'An error occurred. Please try again.');
             }
         } catch (error) {
@@ -129,12 +130,12 @@ const ContactForm = () => {
                                 You can also find me on these platforms. I'm most active on GitHub and LinkedIn.
                             </p>
                             <div className="flex justify-center md:justify-start gap-6 mt-4">
-                                <a href="https://github.com/Shazia-Zameer-999" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-purple-400 transition-colors">
+                                <Link href="https://github.com/Shazia-Zameer-999" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-purple-400 transition-colors">
                                     <FiGithub size={32} />
-                                </a>
-                                <a href="https://www.linkedin.com/in/daten-diva-903014332/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-purple-400 transition-colors">
+                                </Link>
+                                <Link href="https://www.linkedin.com/in/daten-diva-903014332/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-purple-400 transition-colors">
                                     <FiLinkedin size={32} />
-                                </a>
+                                </Link>
                             </div>
                         </div>
                     </div>
