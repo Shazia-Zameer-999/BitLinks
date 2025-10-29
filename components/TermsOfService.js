@@ -4,7 +4,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { FiGavel, FiUserCheck, FiShield, FiAlertTriangle, FiGitPullRequest, FiXCircle } from 'react-icons/fi';
 
-// A reusable component for each section to keep our code clean
+
 const TermSection = ({ icon, title, summary, children }) => (
     <motion.div
         className="mb-12"
@@ -34,7 +34,6 @@ const TermsOfService = () => {
     return (
         <div className='min-h-screen bg-gray-900 bg-gradient-to-br from-[#1a0b2e] via-gray-900 to-gray-900 text-white pt-24 pb-12'>
             <div className='container mx-auto px-6'>
-                {/* Header */}
                 <motion.header
                     className='text-center py-16'
                     initial={{ opacity: 0, y: 20 }}
@@ -50,7 +49,7 @@ const TermsOfService = () => {
                     <p className="text-sm text-gray-500 mt-4">Last Updated: {new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</p>
                 </motion.header>
 
-                {/* Main Content */}
+             
                 <div className="max-w-4xl mx-auto">
                     <TermSection
                         icon={<FiUserCheck size={24} />}

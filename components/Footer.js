@@ -18,7 +18,7 @@ const Footer = () => {
                             <p className="font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-500">
                                 Crafted by Daten Diva
                             </p>
-                            <Link href="/" target="_blank" rel="noopener noreferrer" className="text-sm text-gray-400 hover:text-purple-400 transition-colors flex items-center gap-2 group mt-2">
+                            <Link href="https://portfolio-dd-ebon.vercel.app/" target="_blank" rel="noopener noreferrer" className="text-sm text-gray-400 hover:text-purple-400 transition-colors flex items-center gap-2 group mt-2">
                                 View Portfolio <FiArrowRight className="transition-transform group-hover:translate-x-1" />
                             </Link>
                         </div>

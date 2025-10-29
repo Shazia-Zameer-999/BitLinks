@@ -6,7 +6,7 @@ export async function POST(request) {
     const db = client.db("bitlinks")
     const collection = db.collection("url")
 
-    //check if the short url exists
+   
     const doc = await collection.findOne({ shorturl: body.shorturl })
     if (doc) {
         return Response.json({ success: false, error: true, message: 'URL already exists!' })

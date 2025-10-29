@@ -23,7 +23,7 @@ const Navbar = () => {
     return (
         <nav className='fixed top-0 left-0 right-0 z-50 bg-gray-900/50 backdrop-blur-lg border-b border-gray-700/50'>
             <div className='container mx-auto px-6 py-4 flex justify-between items-center'>
-                {/* Logo */}
+               
                 <div className='flex gap-2'>
                     <Image src={"/link.jpg"} alt='logo' width={40} height={50} className='rounded-full' />
                     <Link href="/" className="logo font-bold text-2xl text-white">
@@ -31,13 +31,6 @@ const Navbar = () => {
                     </Link>
                 </div>
 
-                {/* Desktop Menu Links */}
-                {/* <div className='hidden md:flex items-center gap-8 text-lg text-gray-300'>
-                    <Link href="/" className="hover:text-purple-400 transition-colors">Home</Link>
-                    <Link href="/about" className="hover:text-purple-400 transition-colors">About Us</Link>
-                    <Link href="/shorten" className="hover:text-purple-400 transition-colors">Shorten</Link>
-                    <Link href="/contact" className="hover:text-purple-400 transition-colors">Contact Us</Link>
-                </div> */}
                 <div className='hidden lg:flex items-center gap-8 text-lg text-gray-300'>
                     {navLinks.map((link) => {
                         const isActive = pathname === link.href;
@@ -47,8 +40,8 @@ const Navbar = () => {
                                 href={link.href}
                                 className={
                                     isActive
-                                        ? 'text-purple-400 font-bold [text-shadow:0_0_10px_#9F7AEA]' // Active "glow" style
-                                        : 'hover:text-purple-400 transition-colors' // Default style
+                                        ? 'text-purple-400 font-bold [text-shadow:0_0_10px_#9F7AEA]' 
+                                        : 'hover:text-purple-400 transition-colors' 
                                 }
                             >
                                 {link.name}
@@ -87,10 +80,7 @@ const Navbar = () => {
                     className='lg:hidden absolute top-full left-0 w-full bg-gray-900/95 border-t border-gray-700/50'
                 >
                     <div className='flex flex-col items-center gap-6 py-8 text-lg text-gray-300'>
-                        {/* <Link href="/" onClick={toggleMenu} className="hover:text-purple-400">Home</Link>
-                        <Link href="/about" onClick={toggleMenu} className="hover:text-purple-400">About</Link>
-                        <Link href="/shorten" onClick={toggleMenu} className="hover:text-purple-400">Shorten</Link>
-                        <Link href="/contact" onClick={toggleMenu} className="hover:text-purple-400">Contact Us</Link> */}
+                        
                         {navLinks.map((link) => {
                             const isActive = pathname === link.href;
                             return (
@@ -100,8 +90,8 @@ const Navbar = () => {
                                     onClick={toggleMenu}
                                     className={
                                         isActive
-                                            ? 'text-purple-400 font-bold [text-shadow:0_0_10px_#9F7AEA]' // Active "glow" style
-                                            : 'hover:text-purple-400' // Default style
+                                            ? 'text-purple-400 font-bold [text-shadow:0_0_10px_#9F7AEA]' 
+                                            : 'hover:text-purple-400' 
                                     }
                                 >
                                     {link.name}
@@ -114,7 +104,7 @@ const Navbar = () => {
                                     <FiGithub /> Github
                                 </button>
                             </Link>
-                            <Link href="/generate">
+                            <Link href="/shorten">
                                 <button className='cursor-pointer bg-purple-600 rounded-lg px-5 py-2 font-semibold text-white hover:bg-purple-700 transition-all'>
                                     Try Now
                                 </button>

@@ -2,7 +2,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { FiArrowRight, FiGithub } from "react-icons/fi"; // Using react-icons for a techy feel
+import { FiArrowRight, FiGithub } from "react-icons/fi";
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -40,12 +40,12 @@ export default function Home() {
           </motion.p>
           <motion.div className="flex gap-4 py-5"
             variants={itemVariants}>
-            <Link href="/generate">
+            <Link href="/shorten">
               <button className='flex items-center gap-2 bg-purple-600 rounded-lg px-6 py-3 font-bold text-white hover:bg-purple-700 transition-all duration-300 transform hover:scale-105'>
                 <span>Try Now</span> <FiArrowRight />
               </button>
             </Link>
-            <Link href="https://github.com/your-repo" target="_blank">
+            <Link href="https://github.com/Shazia-Zameer-999/BitLinks" target="_blank">
               <button className='flex items-center gap-2 bg-gray-700 rounded-lg px-6 py-3 font-bold text-white hover:bg-gray-600 transition-all duration-300 transform hover:scale-105'>
                 <FiGithub /> <span>GitHub</span>
               </button>

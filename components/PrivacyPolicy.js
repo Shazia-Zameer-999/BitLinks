@@ -4,7 +4,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { FiShield, FiDatabase, FiShare2, FiArchive, FiGitPullRequest, FiHelpCircle } from 'react-icons/fi';
 
-// A reusable component for each section
+
 const PolicySection = ({ icon, title, summary, children }) => (
     <motion.div
         className="mb-12"
@@ -34,7 +34,6 @@ const PrivacyPolicy = () => {
     return (
         <div className='min-h-screen bg-gray-900 bg-gradient-to-br from-[#1a0b2e] via-gray-900 to-gray-900 text-white pt-24 pb-12'>
             <div className='container mx-auto px-6'>
-                {/* Header */}
                 <motion.header
                     className='text-center py-16'
                     initial={{ opacity: 0, y: 20 }}
@@ -50,7 +49,6 @@ const PrivacyPolicy = () => {
                     <p className="text-sm text-gray-500 mt-4">Last Updated: {new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</p>
                 </motion.header>
 
-                {/* Main Content */}
                 <div className="max-w-4xl mx-auto">
                     <PolicySection
                         icon={<FiDatabase size={24} />}

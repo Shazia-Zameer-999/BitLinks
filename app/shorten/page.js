@@ -38,9 +38,11 @@ const Shorten = () => {
             const result = await response.json();
 
             if (response.ok) {
-                // Use the short URL returned from the API for consistency
+
                 const finalShortUrl = result.shorturl || shorturl;
-                setgenerated(`${process.env.NEXT_PUBLIC_HOST}/${finalShortUrl}`);
+                // setgenerated(`${process.env.NEXT_PUBLIC_HOST}/${finalShortUrl}`);
+                const currentHost = window.location.origin;
+                setgenerated(`${currentHost}/${finalShortUrl}`);
                 toast.success(result.message || 'URL shortened successfully!');
                 seturl("");
                 setshorturl("");
@@ -64,7 +66,7 @@ const Shorten = () => {
 
     return (
         <>
-            {/* This component will render the toasts */}
+
             <Toaster position="top-center" reverseOrder={false} toastOptions={{
                 className: '',
                 style: {
@@ -85,7 +87,7 @@ const Shorten = () => {
                     </div>
 
                     <div className='flex flex-col gap-6'>
-                        {/* Long URL Input */}
+                      
                         <div className="relative">
                             <FiLink className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 text-xl" />
                             <input
@@ -97,7 +99,7 @@ const Shorten = () => {
                                 placeholder='Enter your long URL (e.g., https://...)' />
                         </div>
 
-                        {/* Custom Short URL Input */}
+
                         <div className="relative">
                             <FiEdit2 className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 text-xl" />
                             <input
@@ -109,7 +111,7 @@ const Shorten = () => {
                                 placeholder='Custom alias (optional)' />
                         </div>
 
-                        {/* Generate Button */}
+
                         <button
                             onClick={generate}
                             disabled={loading}
@@ -124,7 +126,7 @@ const Shorten = () => {
                         </button>
                     </div>
 
-                    {/* Result Display */}
+
                     {generated && (
                         <motion.div
                             className="mt-8 p-4 bg-gray-800 border border-gray-700 rounded-lg"
