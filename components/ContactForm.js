@@ -21,6 +21,7 @@ const ContactForm = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
 
+
         if (!formData.name || !formData.email || !formData.message) {
             toast.error('Please fill out all fields.');
             return;

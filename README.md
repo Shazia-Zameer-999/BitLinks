@@ -108,7 +108,7 @@ Contributions are what make the open-source community such an amazing place to l
 
 This project is distributed under the MIT License. See `LICENSE` for more information.
 
-**Daten Diva** - [github.com/Shazia-Zameer-999](https://github.com/Shazia-Zameer-999)
+**Shazia Zameer** - [github.com/Shazia-Zameer-999](https://github.com/Shazia-Zameer-999)
 
 Project Link: [https://github.com/Shazia-Zameer-999/BitLinks](https://github.com/Shazia-Zameer-999/BitLinks)
 

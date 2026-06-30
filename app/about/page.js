@@ -79,13 +79,13 @@ const About = () => {
                     <div className='md:w-2/3'>
                         <div className="bg-gray-800/50 p-8 rounded-xl border border-gray-700 flex flex-col sm:flex-row items-center gap-6">
 
-                            <Image src="/Daten_Logo.jpg" alt="Creator's Avatar" width={120} height={120} className="rounded-full border-2 border-purple-400" />
+                            <Image src="/shazia.jpg" alt="Creator's Avatar" width={120} height={120} className="rounded-full border-2 border-purple-400" />
                             <div>
-                                <h3 className="text-2xl font-bold">Daten Diva</h3>
+                                <h3 className="text-2xl font-bold">Shazia Zameer</h3>
                                 <p className="text-gray-400 mt-2">"A full-stack developer focused on building beautiful, high-performance web applications."</p>
                                 <div className="flex gap-4 mt-4">
                                     <Link href="https://github.com/Shazia-Zameer-999" target="_blank" className="text-gray-300 hover:text-purple-400 transition-colors">GitHub</Link>
-                                    <Link href="https://www.linkedin.com/in/daten-diva-903014332/" target="_blank" className="text-gray-300 hover:text-purple-400 transition-colors">LinkedIn</Link>
+                                    <Link href="https://www.linkedin.com/in/shazia-zameer-59b149308/" target="_blank" className="text-gray-300 hover:text-purple-400 transition-colors">LinkedIn</Link>
                                 </div>
                             </div>
                         </div>

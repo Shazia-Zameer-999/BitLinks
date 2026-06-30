@@ -18,10 +18,10 @@ export async function POST(req) {
     try {
         await connectToDatabase();
         const data = await req.json();
-        console.log(data)
+
 
         const newContact = await Contact.create(data);
-        console.log(newContact)
+
         await resend.emails.send({
             from: 'onboarding@resend.dev',
             to: 'datendiva.mailer@gmail.com',
