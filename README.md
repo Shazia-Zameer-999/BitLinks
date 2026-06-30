@@ -1,15 +1,46 @@
 <div align="center">
-  <a href="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=18&pause=1200&color=9F7AEA&center=true&width=435&lines=The+Fastest+%26+Simplest+URL+Shortener.;Straight+to+the+point.+No+tracking.;Free%2C+Private%2C+and+Open-Source.">
-    <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=18&pause=1200&color=9F7AEA&center=true&width=435&lines=The+Fastest+%26+Simplest+URL+Shortener.;Straight+to+the+point.+No+tracking.;Free%2C+Private%2C+and+Open-Source." alt="Typing SVG" />
-  </a>
+
+# 🔗 BitLinks
+
+A modern URL shortener built with **Next.js**, **MongoDB**, and **Resend**, featuring custom aliases, server-side validation, dynamic redirects, and a responsive user interface.
+
+[![Next.js](https://img.shields.io/badge/Next.js-16-black?logo=next.js)](https://nextjs.org/)
+[![React](https://img.shields.io/badge/React-19-61DAFB?logo=react)](https://react.dev/)
+[![MongoDB](https://img.shields.io/badge/MongoDB-Atlas-47A248?logo=mongodb)](https://www.mongodb.com/)
+[![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-black?logo=vercel)](https://vercel.com)
+
+**🌐 Live Demo:** https://bit-links-zeta.vercel.app
+
 </div>
 
-<div align="center" style="margin-top: 20px;">
-  <a href="https://skillicons.dev">
-    <img src="https://skillicons.dev/icons?i=nextjs,react,tailwind,mongodb,nodejs,vercel,git" />
-  </a>
-</div>
-<br>
+---
+
+# 📖 Overview
+
+BitLinks is a full-stack URL shortening application that allows users to create custom short URLs, manage redirects through MongoDB, and submit contact messages that are stored in the database and delivered via Resend.
+
+The project was built with the Next.js App Router and demonstrates modern full-stack development practices using server-side API routes, MongoDB Atlas, and responsive UI design.
+
+---
+
+# ✨ Features
+
+- 🔗 Create custom short URLs
+- 🚀 Instant redirect to original destination
+- 🛡 Duplicate alias validation
+- 📩 Contact form with email notifications
+- 💾 MongoDB Atlas integration
+- 🎨 Responsive modern UI
+- ⚡ Built using Next.js App Router
+- 🌙 Animated interface using Framer Motion
+- 📱 Mobile friendly
+- 📜 Legal pages (Privacy Policy & Terms)
+
+---
+
+# 🖼 Screenshots
+
 <div align="center">
   <a href="/public/demo2.png">
     <img src="/public/demo2.png" alt="BitLinks Banner" width="800"/>
@@ -24,95 +55,305 @@
 
 </div>
 
-## 🚀 Showcase & Live Demo
+---
 
-**BitLinks** redefines URL shortening by focusing on speed, privacy, and simplicity. Below is a live demonstration of its core functionality.
+# 🏗 Architecture
 
-<div align="center">
-  <a href="https://your-live-url.com/">
-    <img src="https://i.imgur.com/your-gif-url.gif" alt="BitLinks App Demo" width="800"/>
-  </a>
-  <br>
-  <h3><a href="https://your-live-url.com/">🔗 Try BitLinks Live!</a></h3>
-</div>
+```
+User
+   │
+   ▼
+Next.js Frontend
+   │
+   ▼
+API Routes
+   │
+   ├── MongoDB Atlas
+   │
+   └── Resend Email API
+```
 
-## ✨ Core Features
+---
 
-| Feature                 | Description                                                                    |
-| ----------------------- | ------------------------------------------------------------------------------ |
-| ⚡ **Lightning-Fast**   | Get your shortened URL in the blink of an eye with our optimized backend.      |
-| ✍️ **Custom Aliases**   | Personalize your links with optional, easy-to-remember custom aliases.         |
-| 🔒 **Privacy First**    | We don't track your clicks or sell your data. Your information is yours alone. |
-| 📱 **Fully Responsive** | A seamless experience on any device, from mobile to desktop.                   |
-| 🌍 **Open Source**      | Transparent and community-driven. View the code, contribute, or self-host.     |
-| 📧 **Contact Form**     | Integrated contact form with instant email notifications powered by Resend.    |
+# ⚙ Tech Stack
 
-## 🛠️ Tech Stack & Tools
+| Category | Technology |
+|----------|------------|
+| Framework | Next.js 16 |
+| Language | JavaScript |
+| UI | React 19 |
+| Styling | Tailwind CSS v4 |
+| Animations | Framer Motion |
+| Database | MongoDB Atlas |
+| ODM | Mongoose |
+| Email | Resend |
+| Deployment | Vercel |
 
-This project is built with a modern, powerful, and scalable tech stack to deliver a top-tier user experience.
+---
 
-<p align="center">
-  <a href="https://skillicons.dev">
-    <img src="https://skillicons.dev/icons?i=nextjs,react,tailwind,mongodb,nodejs,express,vercel,git&perline=8" />
-  </a>
-</p>
+# 📂 Project Structure
 
-## ⚙️ Getting Started
+```
+BitLinks
+│
+├── app/
+│   ├── api/
+│   ├── shorten/
+│   ├── about/
+│   ├── contact/
+│   ├── privacy/
+│   ├── terms/
+│   └── [shorturl]/
+│
+├── components/
+├── models/
+├── lib/
+├── public/
+└── README.md
+```
 
-To run this project locally, follow these steps:
+---
 
-#### 1. Clone the Repository
+# 🚀 Getting Started
+
+## Clone the repository
 
 ```bash
-git clone [https://github.com/Shazia-Zameer-999/BitLinks.git](https://github.com/Shazia-Zameer-999/BitLinks.git)
+git clone https://github.com/Shazia-Zameer-999/BitLinks.git
+
 cd BitLinks
 ```
 
-#### 2. Install Dependencies
+## Install dependencies
 
 ```bash
 npm install
 ```
 
-#### 3. Set Up Environment Variables
+## Configure environment variables
 
-Create a file named `.env.local` in the root of your project and add your credentials.
+Create a file named
 
-```env
-# MongoDB Connection String
-MONGODB_URI="your_mongodb_connection_string"
-
-# Resend API Key for contact form
-RESEND_API_KEY="your_resend_api_key"
+```text
+.env.local
 ```
 
-#### 4. Run the Development Server
+and add
+
+```env
+MONGODB_URI=your_mongodb_connection_string
+
+RESEND_API_KEY=your_resend_api_key
+```
+
+---
+
+## Start the development server
 
 ```bash
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Visit
 
-## 🤝 Contributing
+```
+http://localhost:3000
+```
 
-Contributions are what make the open-source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+---
 
-1.  Fork the Project
-2.  Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3.  Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4.  Push to the Branch (`git push origin feature/AmazingFeature`)
-5.  Open a Pull Request
+# 🌍 Environment Variables
 
-## 📄 License & Contact
+| Variable | Required | Description |
+|----------|----------|-------------|
+| MONGODB_URI | ✅ | MongoDB Atlas connection string |
+| RESEND_API_KEY | ✅ | API key used to send emails |
 
-This project is distributed under the MIT License. See `LICENSE` for more information.
+---
 
-**Shazia Zameer** - [github.com/Shazia-Zameer-999](https://github.com/Shazia-Zameer-999)
+# 📡 API Endpoints
 
-Project Link: [https://github.com/Shazia-Zameer-999/BitLinks](https://github.com/Shazia-Zameer-999/BitLinks)
+## Generate Short Link
 
-<br>
+```
+POST /api/generate
+```
+
+Creates a new shortened URL.
+
+---
+
+## Contact Form
+
+```
+POST /api/contact
+```
+
+Stores the contact request and sends an email using Resend.
+
+---
+
+# 🧩 Application Routes
+
+| Route | Description |
+|--------|-------------|
+| `/` | Landing Page |
+| `/shorten` | Create a shortened URL |
+| `/about` | About |
+| `/contact` | Contact |
+| `/privacy` | Privacy Policy |
+| `/terms` | Terms of Service |
+| `/[shorturl]` | Dynamic Redirect |
+
+---
+
+# 🔄 Workflow
+
+```text
+Enter URL
+      │
+      ▼
+Choose Custom Alias
+      │
+      ▼
+Server Validation
+      │
+      ▼
+Store in MongoDB
+      │
+      ▼
+Generate Short Link
+      │
+      ▼
+Visitor Opens Link
+      │
+      ▼
+Redirect to Original URL
+```
+
+---
+
+# 📦 Available Scripts
+
+```bash
+npm run dev
+```
+
+Runs the development server.
+
+```bash
+npm run build
+```
+
+Creates a production build.
+
+```bash
+npm run start
+```
+
+Starts the production server.
+
+```bash
+npm run lint
+```
+
+Runs ESLint.
+
+---
+
+# 🚀 Deployment
+
+The application can be deployed to **Vercel**.
+
+Required environment variables:
+
+- MONGODB_URI
+- RESEND_API_KEY
+
+---
+
+# 🛣 Roadmap
+
+- [x] URL shortening
+- [x] Dynamic redirects
+- [x] MongoDB integration
+- [x] Contact form
+- [x] Email notifications
+- [ ] QR Code generation
+- [ ] Analytics dashboard
+- [ ] User authentication
+- [ ] Click tracking
+- [ ] Link expiration
+- [ ] Custom domains
+- [ ] Dashboard for managing links
+- [ ] Rate limiting
+
+---
+
+# 🤝 Contributing
+
+Contributions are always welcome.
+
+1. Fork the repository
+
+2. Create a feature branch
+
+```bash
+git checkout -b feature/new-feature
+```
+
+3. Commit your changes
+
+```bash
+git commit -m "Add new feature"
+```
+
+4. Push
+
+```bash
+git push origin feature/new-feature
+```
+
+5. Open a Pull Request
+
+---
+
+# 🐞 Reporting Issues
+
+If you discover a bug, please open a GitHub Issue with:
+
+- Steps to reproduce
+- Expected behavior
+- Actual behavior
+- Screenshots (if applicable)
+
+---
+
+# 🔒 Security
+
+Please do not publicly disclose security vulnerabilities.
+
+Refer to the project's **SECURITY.md** for responsible disclosure instructions.
+
+---
+
+# 📄 License
+
+This project is licensed under the MIT License.
+
+---
+
+# 👩‍💻 Author
+
+**Shazia Zameer**
+
+- GitHub: https://github.com/Shazia-Zameer-999
+- Portfolio: https://www.datendiva.me
+
+---
+
 <div align="center">
-  <p>✨ Made with ❤️ and a lot of coffee ✨</p>
+
+⭐ If you found this project useful, consider starring the repository!
+
 </div>
