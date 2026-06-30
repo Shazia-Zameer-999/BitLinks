@@ -9,6 +9,7 @@
     "lint": "eslint"
   },
   "dependencies": {
+    "@react-email/render": "^1.4.0",
     "framer-motion": "^12.23.21",
     "icons": "^1.0.0",
     "mongodb": "^6.20.0",
